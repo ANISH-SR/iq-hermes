@@ -13,39 +13,51 @@ Upload and manage Hermes agent skills on-chain using the IQLabs SDK.
 
 ## Quick Start
 
-### 1. Install
+### 1. Clone and Install
 
 ```bash
-cd /home/abhi/iqlabs-core
-npm install
+git clone https://github.com/ANISH-SR/iq-hermes.git
+cd iq-hermes
+npm install -g .
 ```
+
+This installs the `iqlabs` command globally.
 
 ### 2. Configure
 
-Copy `.env.example` to `.env` and fill in your credentials:
-
 ```bash
 cp .env.example .env
-nano .env
+# Edit .env with your Solana RPC and private key
 ```
 
-```env
-SOLANA_RPC_URL=https://mainnet.helius-rpc.com/?api-key=YOUR_KEY
-SOLANA_PRIVATE_KEY=your_base58_private_key
+### 3. Install Hermes Skill (Optional)
+
+To use `/iq-upload` inside Hermes:
+
+```bash
+./install-hermes-skill.sh
 ```
 
-### 3. Use
+### 4. Use
 
 ```bash
 # Upload a skill
-npm run upload -- ~/.hermes/skills/my-skill/
+iqlabs upload ~/.hermes/skills/my-skill/
 
 # Download a skill
-npm run download -- 5Xg7...abc123 --install
+iqlabs download 5Xg7...abc123 --install
 
 # List uploaded skills
-npm run list
+iqlabs list
 ```
+
+Or inside Hermes:
+```bash
+> /iq-upload ~/.hermes/skills/my-skill/
+> /iq-download 5Xg7...abc123 --install
+```
+
+📖 **Full Setup Guide**: See [SETUP.md](SETUP.md)
 
 ## Commands
 

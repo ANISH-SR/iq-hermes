@@ -1,28 +1,16 @@
-import chalk from 'chalk';
+import chalk from 'chalk';        // holy shit 
 
 export function showIntro(): void {
-  // Matrix-style ASCII art
-  const matrixArt = `
-${chalk.green('    ██╗  ████████╗     ██╗      █████╗ ██████╗ ███████╗')}
-${chalk.green('    ██║  ╚══██╔══╝     ██║     ██╔══██╗██╔══██╗██╔════╝')}
-${chalk.green('    ██║     ██║        ██║     ███████║██████╔╝███████╗')}
-${chalk.green('    ██║     ██║        ██║     ██╔══██║██╔══██╗╚════██║')}
-${chalk.green('    ███████╗██║        ███████╗██║  ██║██████╔╝███████║')}
-${chalk.green('    ╚══════╝╚═╝        ╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝')}
-${chalk.gray('    ════════════════════════════════════════════════════')}
-${chalk.green('       Upload Hermes Skills to Solana via IQLabs SDK')}
-${chalk.gray('    ════════════════════════════════════════════════════')}
-`;
+  // Matrix rain header
+  console.log();
 
-  // Matrix rain effect simulation
-  const rain = [
+  // Matrix rain effect simulation        meh :(
+  const rain = [            
     '01010101010101010101010101010101010101010101010101010',
     '10101010101010101010101010101010101010101010101010101',
     '11001100110011001100110011001100110011001100110011001',
   ];
 
-  console.log(matrixArt);
-  
   // Show random matrix rain lines
   rain.forEach((line, i) => {
     setTimeout(() => {

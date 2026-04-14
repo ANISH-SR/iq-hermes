@@ -1,0 +1,12 @@
+#!/bin/bash
+# IQ Upload - Hermes skill wrapper for iqlabs upload
+
+# Check if iqlabs is installed
+if ! command -v iqlabs &> /dev/null; then
+    echo "Error: iqlabs is not installed"
+    echo "Please install it: cd /home/abhi/iqlabs-core && npm install -g ."
+    exit 1
+fi
+
+# Call iqlabs upload with all arguments
+iqlabs upload "$@"
