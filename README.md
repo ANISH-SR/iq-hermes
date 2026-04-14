@@ -4,6 +4,9 @@ Upload and manage Hermes agent skills on-chain using the IQLabs SDK.
 
 🎥 **Demo Video**: [Watch on Loom](https://www.loom.com/share/da79aea57d5745ae892e0f606394997e)
 
+📸 **Screenshot**: Successful upload inside Hermes agent
+![Hermes Upload Success](assets/hermes-upload-success.png)
+
 ## Features
 
 - [X] **Upload skills to Solana** - Permanent, immutable storage
