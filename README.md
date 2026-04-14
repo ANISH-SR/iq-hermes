@@ -147,11 +147,55 @@ iqlabs-core/
 4. **Upload** - Uses IQLabs `codeIn()` to store on Solana
 5. **Registry** - Saves signature locally for reference
 
+## Configuration
+
+### IQLabs Tool (.env)
+
+Create `.env` in the iq-hermes directory:
+
+```bash
+SOLANA_RPC_URL=https://api.devnet.solana.com
+SOLANA_PRIVATE_KEY=your_base58_private_key
+```
+
+### Hermes Agent Configuration
+
+Add to `~/.hermes/.env`:
+
+```bash
+# OpenRouter API Key (for LLM access)
+OPENROUTER_API_KEY=sk-or-v1-your_key_here
+
+# Default model
+DEFAULT_MODEL=openai/gpt-4o
+
+# Solana config (for iq-upload skill)
+SOLANA_RPC_URL=https://api.devnet.solana.com
+SOLANA_PRIVATE_KEY=your_base58_private_key
+```
+
+### OpenRouter Setup
+
+1. Get API key: https://openrouter.ai/keys
+2. Add to `~/.hermes/.env`
+3. Test with: `hermes --model openai/gpt-4o`
+
+### Hermes Skills Directory
+
+Ensure skills are loaded from:
+```
+~/.hermes/skills/
+├── iq-upload/       # This tool's skill
+├── coin-flip/       # Your uploaded skills
+└── ...
+```
+
 ## Requirements
 
 - Node.js 18+
 - Solana wallet with SOL for fees
 - Hermes agent (optional, for skill usage)
+- OpenRouter API key (for LLM features in Hermes)
 
 ## Links
 
