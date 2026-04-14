@@ -1,11 +1,12 @@
 # IQ Skill Uploader
 
+![IO Labs x Nous Research](header.png)
+
 Upload and manage Hermes agent skills on-chain using the IQLabs SDK.
 
 🎥 **Demo Video**: [Watch on Loom](https://www.loom.com/share/da79aea57d5745ae892e0f606394997e)
 
-📸 **Screenshot**: Successful upload inside Hermes agent
-![Hermes Upload Success](assets/hermes-upload-success.png)
+
 
 ## Features
 
@@ -149,6 +150,8 @@ iqlabs-core/
 3. **Encrypt** (optional) - XOR encryption for private skills
 4. **Upload** - Uses IQLabs `codeIn()` to store on Solana
 5. **Registry** - Saves signature locally for reference
+
+![Hermes Upload Success](ss.png)
 
 ## Configuration
 
