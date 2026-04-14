@@ -5,20 +5,12 @@
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "iq-upload": "dist/cli/upload.js",
-    "iq-download": "dist/cli/download.js",
-    "iq-list": "dist/cli/list.js"
+    "iqlabs": "dist/cli/iqlabs.js"
   },
   "scripts": {
     "build": "tsc",
     "b": "tsc",
-    "dev": "tsx",
-    "up": "tsx src/cli/upload.ts",
-    "down": "tsx src/cli/download.ts",
-    "ls": "tsx src/cli/list.ts",
-    "upload": "tsx src/cli/upload.ts",
-    "download": "tsx src/cli/download.ts",
-    "list": "tsx src/cli/list.ts"
+    "dev": "tsx"
   },
   "dependencies": {
     "@iqlabs-official/solana-sdk": "^0.1.21",
@@ -27,6 +19,7 @@
     "bs58": "^6.0.0",
     "chalk": "^5.3.0",
     "commander": "^12.0.0",
+    "dotenv": "^17.4.2",
     "ora": "^8.0.0"
   },
   "devDependencies": {

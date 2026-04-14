@@ -2,6 +2,14 @@ import { Connection, Keypair } from '@solana/web3.js';
 import iqlabs from '@iqlabs-official/solana-sdk';
 import { UploadResult, IQConfig } from './types.js';
 import bs58 from 'bs58';
+import chalk from 'chalk';
+
+function renderProgressBar(percent: number, width: number = 30): string {
+  const filled = Math.round((percent / 100) * width);
+  const empty = width - filled;
+  const bar = chalk.green('█'.repeat(filled)) + chalk.gray('░'.repeat(empty));
+  return `[${bar}] ${percent}%`;
+}
 
 export async function uploadToSolana(
   data: Buffer,
@@ -19,7 +27,7 @@ export async function uploadToSolana(
     0, // upload method
     'application/gzip',
     (percent: number) => {
-      process.stdout.write(`\rUpload progress: ${percent}%`);
+      process.stdout.write(`\r${renderProgressBar(percent)}`);
     }
   );
 

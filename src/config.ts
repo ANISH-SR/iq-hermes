@@ -1,4 +1,9 @@
 import { IQConfig } from './types.js';
+import dotenv from 'dotenv';
+import { join } from 'path';
+
+// Load .env from current working directory
+dotenv.config({ path: join(process.cwd(), '.env') });
 
 export function loadConfig(): IQConfig {
   const rpcUrl = process.env.SOLANA_RPC_URL;
