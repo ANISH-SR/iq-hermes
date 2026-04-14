@@ -1,0 +1,8 @@
+# Short aliases for IQ Skill Uploader
+# Source this file: source /home/abhi/iqlabs-core/.aliases
+
+alias iqbuild='cd /home/abhi/iqlabs-core && npm run build'
+alias iqup='cd /home/abhi/iqlabs-core && npx tsx src/cli/upload.ts'
+alias iqdown='cd /home/abhi/iqlabs-core && npx tsx src/cli/download.ts'
+alias iqls='cd /home/abhi/iqlabs-core && npx tsx src/cli/list.ts'
+alias iqdev='cd /home/abhi/iqlabs-core && npm run dev'
